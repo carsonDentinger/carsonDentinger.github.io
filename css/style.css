@@ -115,6 +115,12 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.schoolBullets{
+    margin: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: circle;
+}
+
 #cardHolder{
     display: flex;
     justify-content: space-evenly;
@@ -213,6 +219,10 @@ body{
     perspective: 1000px;
     border-radius: 25px;
     margin: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flipHeader{
     font-family: 'Poiret One', cursive;
 }
 
@@ -257,8 +267,8 @@ body{
 }
 
 .flipCardText{
-    font-weight: bold;
-    margin-left: .25rem;
+    margin-left: 1.25rem;
+    list-style-type: circle;
 }
 
 .ul{
@@ -269,7 +279,8 @@ body{
 .bulletPoints{
     display: flex;
     flex-direction: column;
-
+    font-size: .82rem;
+    font-weight: 600;
 }
 
 #goblin{
