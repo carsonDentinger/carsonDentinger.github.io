@@ -1,0 +1,317 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    overflow-x: hidden; 
+}
+
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/resources/trees.jpg");
+    background-size: cover;
+}
+
+.header{
+    width: 100vw;
+    background-color: #161925;
+    color:whitesmoke;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+    font-family: 'Poiret One', cursive;
+}
+
+.headerUl{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+}
+.navLogo{
+    height: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 30rem;
+    height: 10rem;
+    background-color: #8EA8C3;
+    left: calc(50% - 15rem);
+    margin-top: 15%;
+    border-radius: 25px;
+    border: solid rgba(22, 25, 37, 0.75);
+    animation-name: animateModal;
+    animation-duration: 0.8s;
+}
+
+.contactLink{
+    text-decoration: none;
+    color:#08090e;
+}
+
+@keyframes animateModal{
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.topDiv{
+    display: flex;
+    margin-left: 5rem;
+    justify-content: space-around;
+}
+
+#name{
+    font-family: 'Poiret One', cursive;
+    font-weight: 200;
+    font-size: 4rem;
+}
+
+#jobTitle{
+    font-family: 'Poiret One', cursive;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.nameDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.headshot{
+    height: 18rem;
+    border-radius: 250px;
+    border: #161925 solid 5px;
+}
+
+.sectionBox{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: rgba(203, 229, 199, 0.85);
+    border-radius: 25px;
+    border: solid rgba(22, 25, 37, 0.75); 
+}
+
+.sectionHeader{
+    font-family: 'Poiret One', cursive;
+    margin: 1rem;
+}
+
+.aboutBody{
+    margin: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#cardHolder{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.schoolCard{
+    background-color: #5b6c7e;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px 0 #0d0f16;
+    border: solid rgba(22, 25, 37, 0.75);
+    transition: 0.3s;
+    margin: 2rem;
+}
+
+.schoolCard:hover{
+    box-shadow: 0 8px 16px 0 #08090e;
+}
+
+.schoolCard:active{
+    box-shadow: 0 0px 0px 0 #08090e;
+    transition: 0.1s;
+}
+
+#wcciBox{
+    font-family: 'Poiret One', cursive;
+    font-weight: 300;
+    display: none;
+    margin: 1rem;
+    border: solid 1px rgba(22, 25, 37, 0.75);
+    border-radius: 25px;
+}
+
+#osuBox{
+    font-family: 'Poiret One', cursive;
+    font-weight: 300;
+    display: none;
+    margin: 1rem;
+    border: solid 1px rgba(22, 25, 37, 0.75);
+    border-radius: 25px;
+}
+
+.eduLogo{
+    height: 15rem;
+}
+
+.xHolder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeX{
+    margin-right: 1rem;
+    margin-top: .5rem;
+    font-family: 'Poiret One', cursive;
+}
+
+.closeX:hover{
+    color: #406E8E;
+}
+
+.schoolHeader{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.schoolUndercard{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-style: italic;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    font-weight: 50;
+    background-color: #161925;
+    color:#CBE5C7;
+    font-family: 'Poiret One', cursive;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.flipCard{
+    background-color: transparent;
+    min-width: 25rem;
+    min-height: 15rem;
+    perspective: 1000px;
+    border-radius: 25px;
+    margin: 2rem;
+    font-family: 'Poiret One', cursive;
+}
+
+.flipCardInner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+.flipCardFront, .flipCardBack {
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flipCardFront{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #0d0f16;
+}
+
+.flipCardBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8EA8C3;
+    border-radius: 25px;
+    color: black;
+    transform: rotateY(180deg);
+    border: 1px solid #0d0f16;
+}
+
+.flipCardText{
+    font-weight: bold;
+    margin-left: .25rem;
+}
+
+.ul{
+    list-style-type: none;
+    border-top:     solid 1px black;
+}
+
+.bulletPoints{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#goblin{
+    width: 18rem;
+}
+
+.screenshot{
+    width: 23rem;
+    border-radius: 25px;
+    margin-top: .25rem;
+    border: solid 1px black;
+}
+
+#instructionHolder{
+    display: flex;
+    justify-content: center;
+}
+
+#projectInstruction{
+    font-family: 'Poiret One', cursive;
+}
+
+.cardLink{
+    text-decoration: none;
+    color: black;
+}
+
+.someSpace{
+    margin-top: .75rem;
+}
+
+::-webkit-scrollbar {
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-clip: content-box;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey; 
+    outline: 1px solid slategrey;
+    border-radius: 25px;
+}
